@@ -44,6 +44,10 @@ public class UserDTO implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public static User formUser(UserDTO userDto) {
+		return new User(userDto.getId(), userDto.getName(), userDto.getEmail());
+	}
 
 	@Override
 	public int hashCode() {
